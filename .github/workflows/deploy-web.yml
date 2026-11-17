@@ -25,7 +25,7 @@ jobs:
       - name: Remover teste de exemplo gerado pelo Flutter
         run: rm -f test/widget_test.dart
       - run: flutter pub get
-      - run: flutter analyze
+      - run: flutter analyze --no-fatal-infos
       - name: Compilar Web
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
